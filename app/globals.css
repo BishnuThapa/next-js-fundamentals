@@ -17,7 +17,7 @@
 }
 
 body {
-  padding: 2rem;
+  /* padding: 2rem; */
   color: rgb(var(--foreground-rgb));
   /* background: linear-gradient(
       to bottom,
@@ -30,5 +30,12 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+
+@layer base{
+  h1 {
+    @apply text-3xl font-bold mb-3
   }
 }
