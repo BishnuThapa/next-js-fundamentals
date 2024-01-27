@@ -14,7 +14,7 @@ interface Props {
 
 const UserTable = async ({ sortOrder }: Props) => {
   const res = await fetch(
-    "https://jsonplaceholder.typicode.com/xusers"
+    "https://jsonplaceholder.typicode.com/users"
     // {
     // cache: "no-store",} // no-store for disable caching
     //{next:{revalidate:10}} get fresh data from backend every 10 second only in fetch function not in third party axios.
