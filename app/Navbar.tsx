@@ -21,13 +21,18 @@ const Navbar = () => {
           Admin
         </Link>
         {status === "loading" && <span>Loading...</span>}
+        {status === "authenticated" && (
+          <span className="mr-5">
+            {session.user?.email}{" "}
+            <Link className="mr-5" href="/api/auth/signout">
+              Sign Out
+            </Link>
+          </span>
+        )}
         {status === "unauthenticated" && (
           <Link className="mr-5" href="/api/auth/signin">
             Sign in
           </Link>
-        )}
-        {status === "authenticated" && (
-          <span className="mr-5">{session.user?.email}</span>
         )}
       </div>
     </>
